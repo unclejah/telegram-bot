@@ -49,7 +49,7 @@ public class NotificationTaskServiceImpl implements NotificationTaskService {
         }
         return Optional.ofNullable(result);
     }
-
+    @Override
     public void notifyAllScheduledTasks(Consumer<NotificationTask> notifier) {
         Collection<NotificationTask> tasks = repository.getScheduledTasks();
         for (NotificationTask task:
